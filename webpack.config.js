@@ -7,14 +7,14 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 module.exports = {
   entry: __dirname + '/app/index.js',
   output: {
-    path: __dirname + '/build/'
-    filename: 'index_bundle.js'
+    path: __dirname + '/build/',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
       {
         test: /\.js$/,
-        exclude: 'node_modules',
+        exclude: /node_modules/,
         loader: 'babel-loader'
       }
     ]
